@@ -12,18 +12,27 @@
 
 // console.log(person);
 
+const personMethod = {
+    eat(){
+        console.log(`Person is eating`);
+    },
+    sleep(){
+        console.log(`Person is sleeping`);
+    },
+    play(){
+        console.log(`Person is playing`);
+    }
+}
+
 function Person(name, age){
     let person= {};
 
     person.name = name;
     person.age = age;
 
-    person.eat = function(){
-        console.log(`Person is eating`);
-    }
-    person.sleep = function(){
-        console.log(`Person is sleeping`);
-    }
+    person.eat = personMethod.eat;
+    person.sleep = personMethod.sleep;
+    person.play = personMethod.play;
 
     return person;
 }
