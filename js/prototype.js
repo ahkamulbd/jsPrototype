@@ -12,33 +12,44 @@
 
 // console.log(person);
 
-const personMethod = {
-    eat(){
-        console.log(`Person is eating`);
-    },
-    sleep(){
-        console.log(`Person is sleeping`);
-    },
-    play(){
-        console.log(`Person is playing`);
-    }
+// const personMethod = {
+//     eat(){
+//         console.log(`Person is eating`);
+//     },
+//     sleep(){
+//         console.log(`Person is sleeping`);
+//     },
+//     play(){
+//         console.log(`Person is playing`);
+//     }
+// }
+
+// function Person(name, age){
+//     let person= {};
+
+//     person.name = name;
+//     person.age = age;
+
+//     person.eat = personMethod.eat;
+//     person.sleep = personMethod.sleep;
+//     person.play = personMethod.play;
+
+//     return person;
+// }
+
+// let sakib = new Person('Sakib', 35);
+// let tamim = new Person('Tamim', 36);
+
+// console.log(sakib);
+// console.log(tamim)
+
+const captain = {
+    name: 'Mashrafi',
+    age: 38,
+    country: 'Bangladesh'
 }
 
-function Person(name, age){
-    let person= {};
+const player = Object.create(captain);
 
-    person.name = name;
-    person.age = age;
-
-    person.eat = personMethod.eat;
-    person.sleep = personMethod.sleep;
-    person.play = personMethod.play;
-
-    return person;
-}
-
-let sakib = new Person('Sakib', 35);
-let tamim = new Person('Tamim', 36);
-
-console.log(sakib);
-console.log(tamim)
+console.log(player);
+console.log(player.name);
