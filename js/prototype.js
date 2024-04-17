@@ -46,7 +46,10 @@
 const captain = {
     name: 'Mashrafi',
     age: 38,
-    country: 'Bangladesh'
+    country: 'Bangladesh',
+    play: function () {
+        console.log(`Playing cricket`);
+    }
 }
 
 const player = Object.create(captain);
