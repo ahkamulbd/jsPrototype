@@ -43,16 +43,44 @@
 // console.log(sakib);
 // console.log(tamim)
 
-const captain = {
-    name: 'Mashrafi',
-    age: 38,
-    country: 'Bangladesh',
-    play: function () {
-        console.log(`Playing cricket`);
+// const captain = {
+//     name: 'Mashrafi',
+//     age: 38,
+//     country: 'Bangladesh',
+//     play: function () {
+//         console.log(`Playing cricket`);
+//     }
+// }
+
+// const player = Object.create(captain);
+
+// console.log(player);
+// console.log(player.name);
+
+/** Property owned by child object from parent: */
+
+const personMethod = {
+    eat() {
+        console.log(`Person is eating`);
+    },
+    sleep() {
+        console.log(`Person is sleeping`);
+    },
+    play() {
+        console.log(`Person is playing`);
     }
 }
 
-const player = Object.create(captain);
+function Person(name, age) {
+    let person = Object.create(personMethod);
 
-console.log(player);
-console.log(player.name);
+    person.name = name;
+    person.age = age;
+
+    return person;
+}
+
+let sakib = new Person('Sakib', 35);
+let tamim = new Person('Tamim', 36);
+console.log(tamim);
+console.log(tamim.play);
